@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Nav from './routes/Nav'
+import Players from './routes/Players'
+import { Route, Routes } from 'react-router'
+import SlideShow from './routes/SlideShow'
+import SlideShow_orginal from './routes/SlideShow copy'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+const App = () => {
+return (
+  <>
+  {/* <Nav/> */}
+  <Routes>      
+    <Route path='/' element={<Nav/>}>
+      <Route path='Players' element={<Players />} />
+      <Route path='SlideShow' element={<SlideShow />} />
+      <Route path='SlideShow_orginal' element={<SlideShow_orginal />} />
+    </Route>
+
+    {/* 
+    <Route path='' element='' />
+    <Route path='' element={< />} />
+    <Route path='' element={< />} />
+    <Route path='' element={< />} />
+    <Route path='' element={< />} />
+    <Route path='' element={< />} /> 
+    */}
+  </Routes>
+  </>
+)}
+export default App
