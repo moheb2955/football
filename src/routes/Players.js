@@ -19,7 +19,7 @@ return <div className="w-[100vw] ">
   <div className="w-[150vw] h-[25vh] -ml-[25vw] -mt-[3.2vh] bg-black rounded-[50%]  "></div>
   <div className="flex justify-center ">
     <img className="w-[30vw] h-[30vw] bg-slate-100 -mt-[31vh] border-[5px] border-white rounded-[50%] " 
-      src=" " 
+      src=" "
       alt="profile img"  
       onError={e=>''}
     />
